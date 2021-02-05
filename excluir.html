@@ -1,0 +1,60 @@
+		<?php
+			session_start();
+			if($_SESSION["email_usuario"] != 1){
+
+    echo "Usuário não está logado. Direcionando para a página de login.";
+    header('Location: index.html');
+
+}
+		?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+			<DIV CLASS="login100-form validate-form p-l-55 p-r-55 p-t-178">
+				<form method="POST" action="excluir.php">
+					<span class="login100-form-title">
+						Preencha novamente seus dados 
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16">
+						<input class="input100" type="text" name="id_adm" id required  placeholder="Digite seu id">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="password" name="senha_adm" id required placeholder="Digite a senha">
+						<span class="focus-input100"></span>
+					</div>
+					<br><Br><br>
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" name="b1" type="submit" value="Excluir Conta">
+						
+					</div>
+<br>
+<br>
+					
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
